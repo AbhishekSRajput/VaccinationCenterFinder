@@ -1,0 +1,38 @@
+.homeContainer {
+	text-align: center;
+}
+
+.heading {
+	font-size: 2rem;
+	margin: 30px auto;
+	color: #0eb981;
+	font-weight: 600;
+	padding: 0.3rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.input {
+	width: 300px;
+	padding: 12px 20px;
+	margin: 15px 0;
+	border: 1px solid #0eb981;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.button {
+	width: 300px;
+	background-color: #0eb981;
+	font-size: 1.6rem;
+	color: #fff;
+	border-radius: 4px;
+	padding: 8px 0;
+	margin: 15px 0;
+}

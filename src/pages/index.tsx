@@ -1,14 +1,14 @@
 //library
 import { Component } from 'react';
-import Head from 'next/head'
+import Head from 'next/head';
 import moment from 'moment';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import { SingleDatePicker } from 'react-dates';
 //components
-import CardComponent from '../components/CardComponent/Card.component'
+import CardComponent from '../components/CardComponent/Card.component';
 //style
-import homeStyle from '../styles/home.module.css'
+import homeStyle from '../styles/home.module.css';
 
 class DateRangeInput extends Component {
 	state = {
@@ -51,17 +51,25 @@ class DateRangeInput extends Component {
 
 	render() {
 		const { date, focused, vaccineData, loading } = this.state;
-		console.log();
+		console.log(vaccineData);
 		return (
 			<>
 				<Head>
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
+					<meta
+						name="viewport"
+						content="width=device-width, initial-scale=1"
+					/>
 					<meta charSet="utf-8" />
 					<title>Vaccination Center Finder</title>
 				</Head>
 				<div className={homeStyle.homeContainer}>
-					<h1 className={homeStyle.heading}>Vaccination Centers Finder</h1>
-					<form onSubmit={this.onFormSubmit} className={homeStyle.form}>
+					<h1 className={homeStyle.heading}>
+						Vaccination Centers Finder
+					</h1>
+					<form
+						onSubmit={this.onFormSubmit}
+						className={homeStyle.form}
+					>
 						<input
 							name="pinCode"
 							placeholder="Pin code: 440009"
@@ -87,8 +95,15 @@ class DateRangeInput extends Component {
 							Search Locale
 						</button>
 					</form>
-					{loading ? <p>....</p> : <CardComponent vaccineData={vaccineData} />}
-				</div></>
+					{loading ? (
+						<p className="animate-pulse px-3 py-2 bg-green-200">
+							Add pin-code to search your local area
+						</p>
+					) : (
+						<CardComponent vaccineData={vaccineData} />
+					)}
+				</div>
+			</>
 		);
 	}
 }

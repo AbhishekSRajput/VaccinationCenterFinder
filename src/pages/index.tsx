@@ -42,10 +42,11 @@ class DateRangeInput extends Component {
 		const pinCode = e.target.elements.pinCode.value;
 		const date = this.state.date;
 		if (pinCode) {
-			this.setState({ pinCode });
 			this.setState({
+				pinCode,
 				simplifiedDate: moment(date).format('DD-MM-YYYY'),
 			});
+
 			e.target.elements.pinCode.value = '';
 		}
 	};

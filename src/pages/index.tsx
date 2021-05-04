@@ -1,6 +1,7 @@
 //library
 import { Component } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import moment from 'moment';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
@@ -54,18 +55,27 @@ class DateRangeInput extends Component {
 		console.log(vaccineData);
 		return (
 			<>
-				<Head>
-					<meta
-						name="viewport"
-						content="width=device-width, initial-scale=1"
-					/>
-					<meta charSet="utf-8" />
-					<title>Vaccination Center Finder</title>
-				</Head>
 				<div className={homeStyle.homeContainer}>
-					<h1 className={homeStyle.heading}>
-						Vaccination Centers Finder
-					</h1>
+					<main>
+						<Head>
+							<title>Vaccination Center Finder</title>
+							<meta
+								name="description"
+								content="An app to find local covid-19 vaccination centers"
+							/>
+						</Head>
+						<h1 className={homeStyle.heading}>
+							Vaccination Centers Finder
+						</h1>
+						<Link
+							href="https://github.com/ApcGamer/VaccinationCenterFinder"
+							passHref
+						>
+							<a className="animate-pulse">
+								Click here to contribute to this project
+							</a>
+						</Link>
+					</main>
 					<form
 						onSubmit={this.onFormSubmit}
 						className={homeStyle.form}
@@ -91,7 +101,10 @@ class DateRangeInput extends Component {
 							showClearDate
 							withFullScreenPortal
 						/>
-						<button className={homeStyle.button}>
+						<button
+							className={homeStyle.button}
+							arial-label="form submit"
+						>
 							Search Locale
 						</button>
 					</form>

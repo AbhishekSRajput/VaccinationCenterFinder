@@ -52,7 +52,6 @@ class DateRangeInput extends Component {
 
 	render() {
 		const { date, focused, vaccineData, loading } = this.state;
-		console.log(vaccineData);
 		return (
 			<>
 				<div className={homeStyle.homeContainer}>
@@ -62,6 +61,14 @@ class DateRangeInput extends Component {
 							<meta
 								name="description"
 								content="An app to find local covid-19 vaccination centers"
+							/>
+							<meta
+								httpEquiv="Content-Type"
+								content="text/html; charSet=utf-8"
+							/>
+							<meta
+								name="viewport"
+								content="width=device-width, initial-scale=1"
 							/>
 						</Head>
 						<h1 className={homeStyle.heading}>

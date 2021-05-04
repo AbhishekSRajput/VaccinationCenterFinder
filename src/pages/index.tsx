@@ -112,7 +112,6 @@ class DateRangeInput extends Component {
 							displayFormat="DD/MM/YYYY"
 							numberOfMonths={1}
 							showDefaultInputIcon
-							showClearDate
 							withFullScreenPortal
 						/>
 						<button

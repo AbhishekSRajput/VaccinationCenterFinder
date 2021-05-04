@@ -13,8 +13,8 @@ const CardComponent: React.FC<CardComponentProps> = ({ vaccineData }) => {
 	return (
 		<div className="style.cardContainer">
 			{datas.length === 0 ? (
-				<p className="animate-pulse bg-red-200 px-3 py-2">
-					Data not available through government portal
+				<p className="animate-pulse bg-red-200 px-3 py-2 uppercase">
+					Currently There's No Vaccination center active in your area.
 				</p>
 			) : (
 				datas.map((data) => (

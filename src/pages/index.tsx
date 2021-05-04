@@ -57,22 +57,29 @@ class DateRangeInput extends Component {
 				<div className={homeStyle.homeContainer}>
 					<main>
 						<Head>
-							<title>Vaccination Center Finder</title>
-							<meta
-								name="description"
-								content="An app to find local covid-19 vaccination centers"
-							/>
-							<meta
-								httpEquiv="Content-Type"
-								content="text/html; charSet=utf-8"
-							/>
 							<meta
 								name="viewport"
 								content="width=device-width, initial-scale=1"
 							/>
+							<meta charSet="utf-8" />
+							<meta
+								name="description"
+								content="An web app to find local corona virus vaccination centers"
+							/>
+							<meta
+								property="og:title"
+								content="Vaccination Center Finder"
+								key="ogtitle"
+							/>
+							<meta
+								property="og:description"
+								content="An web app to find local corona virus vaccination centers"
+								key="ogdesc"
+							/>
+							<title>Vaccination Center Finder</title>
 						</Head>
 						<h1 className={homeStyle.heading}>
-							Vaccination Centers Finder
+							Vaccination Center Finder
 						</h1>
 						<Link
 							href="https://github.com/ApcGamer/VaccinationCenterFinder"
@@ -116,8 +123,9 @@ class DateRangeInput extends Component {
 						</button>
 					</form>
 					{loading ? (
-						<p className="animate-pulse px-3 py-2 bg-green-200">
-							Add pin-code to search your local area
+						<p className="animate-pulse px-3 py-2 bg-green-200 uppercase">
+							** Important refresh the page if you're searching
+							with different Date on Same PinCode **
 						</p>
 					) : (
 						<CardComponent vaccineData={vaccineData} />
